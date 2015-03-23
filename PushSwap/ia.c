@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ia.c                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/03/23 20:23:28 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 20:23:31 by ghilbert         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int		is_sorted(t_pile *a, t_pile *b)
@@ -241,36 +253,8 @@ void		tree(int *test, t_pile **a, t_pile **b, char **res, char **current, int de
 					i++;
 			}
 		*test += 1;
-
-// ft_putstr("############################## ");
-// ft_putnbr(tests);
-// ft_putstr(" ##############################\n");
-// ft_putstr("### current move = ");
-// ft_putstr(print_moves(*current));
-// ft_putstr(" ###\n");
-// ft_putstr("### depth = ");
-// ft_putnbr(depth);
-// ft_putstr(" ###\n");
-// ft_putstr("### depth max= ");
-// ft_putnbr(*depth_max);
-// ft_putstr(" ###\n");
-// ft_putstr("#### Move ############\t");
-// ft_putstr(putmove(moves[i]));
-// ft_putstr("\n#### Reverse move ####\t");
-// ft_putstr(putmove(reverse_move(moves[i])));
-// ft_putstr("\n#### Etat initial des piles ####\n");
-// print_all_pile(*a, *b);
-
 		move_pile(a, b, moves[i]);
 		(*current)[depth] = moves[i];
-		/*
-		ft_putnbr(*test);
-		ft_putstr(" : ");
-		ft_putendl(*current);
-*/
-// ft_putstr("#### Etat des piles ####\n");
-// print_all_pile(*a, *b);
-
 		if (!is_sorted(*a, *b))
 		{
 			if (depth + 1 < *depth_max)
@@ -278,41 +262,18 @@ void		tree(int *test, t_pile **a, t_pile **b, char **res, char **current, int de
 		}
 		else
 		{
-
-// ft_putstr("//////////////////////////////////////////////////////////////\n");
 			if (depth +1 < *depth_max)
 			{
-
-// ft_putstr("NEW RES !\n");
-
 				*res = ft_strdup(*current);
 				*depth_max = depth;
 ft_putnbr(depth + 1);
 ft_putendl(" moves");
-
-// ft_putstr("############################## ");
-// ft_putnbr(tests);
-// ft_putstr(" ##############################\n");
-// ft_putstr("SORTED => ");
-// ft_putstr(print_moves(*res));
-// ft_putstr(" (");
-// ft_putnbr(depth + 1);
-// ft_putendl(" moves)");
-// ft_putstr("\n#### Etat des piles ####\n");
-// print_all_pile(*a, *b);
-// ft_putstr("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n");
 			}
 
 		}
 		i++;
 		move_back(a, b, (*current)[depth]);
-
-// ft_putstr("#### Etat Precedent des piles ####\n");
-// print_all_pile(*a, *b);
-// ft_putstr("##############################################################\n\n");
-
 		(*current)[depth] = '\0';
-
 	}
 }
 
@@ -328,10 +289,8 @@ int		ia(t_pile **a, t_pile **b)
 
 	atmp = NULL;
 	btmp = NULL;
-
 	pile_copy(&atmp, *a);
 	pile_copy(&btmp, *b);
-
 	if (is_sorted(*a, *b))
 		return 0;
 	max = max_depth(&atmp, &btmp);
@@ -340,22 +299,19 @@ int		ia(t_pile **a, t_pile **b)
 	free_pile(&btmp);
 	pile_copy(&atmp, *a);
 	pile_copy(&btmp, *b);
-
 	res = ft_strnew(max);
 	cur = ft_strnew(max);
 	int	tests = 0;
 	tree(&tests, &atmp, &btmp, &res, &cur, 0, &max);
 
-	printf("\033[92m\n#### RESULTAT ####\n");
-	printf("# tests = %d\n# res = %s\n# max = %d\n", tests, print_moves(res), max + 1);
-	printf("##################\033[0m\n");
+printf("\033[92m\n#### RESULTAT ####\n");
+printf("# tests = %d\n# res = %s\n# max = %d\n", tests, print_moves(res), max + 1);
+printf("##################\033[0m\n");
 
 	i = 0;
 	while (res[i])
 	{
-		// ft_putendl(putmove(res[i]));
 		move_pile(a, b, res[i]);
-		// print_all_pile(*a, *b);
 		i++;
 	}
 	return max + 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sduprey <sduprey@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/12 01:25:07 by sduprey           #+#    #+#             */
-/*   Updated: 2015/02/17 09:45:31 by sduprey          ###   ########.fr       */
+/*   Created: 2015/03/23 20:26:56 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 20:26:58 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <libft.h>
 
-#include <stdio.h>
+# include <stdio.h>
 
 # define RED		"\033[00;31m"
 # define WHITE		"\033[00m"
