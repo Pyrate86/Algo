@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_tools.c                                      :+:      :+:    :+:   */
+/*   ft_putcolor.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 20:26:20 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 20:26:26 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/23 17:05:00 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 17:05:16 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "includes/libft.h"
 
-void	print_operation(char *op, char *color, char debug)
+void	ft_putcolor(char *str, int color)
 {
-	ft_putstr(color);
-	ft_putstr(op);
-	ft_putstr(WHITE);
-	if (debug == ON)
-		ft_putendl(":");
-	else if (debug == SEMI)
-		ft_putchar(' ');
-}
-
-void	print_move(int move)
-{
-	ft_putstr(BOLDWHITE);
-	ft_putstr("moves");
-	ft_putstr(WHITE);
-	ft_putstr(": ");
-	ft_putnbr(move);
-	ft_putchar('\n');
+	ft_putstr("\033[");
+	ft_putnbr(color);
+	ft_putstr("m");
+	ft_putstr(str);
+	ft_putstr("\033[0m");
 }

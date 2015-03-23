@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 20:25:13 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 20:25:15 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/23 23:33:22 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 23:33:33 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "ps.h"
 
 void	pile_push(t_pile **pile, int data)
 {
@@ -28,74 +28,11 @@ void	pile_push(t_pile **pile, int data)
 	}
 }
 
-void	pile_swap(t_pile **pile)
+void	create_pile(t_pile **pile, char **av, int ac)
 {
-	t_pile	*tmp;
-
-	if (pile != NULL)
+	while (ac != 0)
 	{
-		if (pile_len(*pile) > 1)
-		{
-			tmp = *pile;
-			*pile = (*pile)->prev;
-			tmp->prev = (*pile)->prev;
-			(*pile)->prev = tmp;
-		}
-	}
-}
-
-void	pile_switch(t_pile **a, t_pile **b)
-{
-	t_pile	*tmp_a;
-	t_pile	*tmp_b;
-
-	tmp_a = *a;
-	tmp_b = *b;
-	if (*a != NULL)
-	{
-		*a = (*a)->prev;
-		*b = tmp_a;
-		(*b)->prev = tmp_b;
-	}
-}
-
-void	pile_rotate(t_pile **pile)
-{
-	t_pile	*tmp;
-
-	if (pile != NULL)
-	{
-		if (pile_len(*pile) > 1)
-		{
-			tmp = *pile;
-			while ((*pile)->prev != NULL)
-				*pile = (*pile)->prev;
-			(*pile)->prev = tmp;
-			*pile = tmp->prev;
-			tmp->prev = NULL;
-		}
-	}
-}
-
-void	pile_rev_rotate(t_pile **pile)
-{
-	t_pile *tmp;
-	t_pile *tmp_prev;
-
-	if (pile != NULL)
-	{
-		if (pile_len(*pile) > 1)
-		{
-			tmp = *pile;
-			tmp_prev = *pile;
-			while (tmp->prev != NULL)
-			{
-				tmp_prev = tmp;
-				tmp = tmp->prev;
-			}
-			tmp->prev = *pile;
-			*pile = tmp;
-			tmp_prev->prev = NULL;
-		}
+		pile_push(pile, ft_atoi(av[ac]));
+		ac--;
 	}
 }

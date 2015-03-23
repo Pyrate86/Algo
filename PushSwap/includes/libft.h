@@ -120,6 +120,7 @@ t_list				*ft_lstend(t_list *t);
 /*
 ** maths
 */
+
 int					ft_pow(int n, int p);
 
 #endif

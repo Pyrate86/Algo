@@ -6,7 +6,7 @@
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:55:31 by ghilbert          #+#    #+#             */
-/*   Updated: 2014/11/17 05:43:46 by ghilbert         ###   ########.fr       */
+/*   Updated: 2014/11/26 14:34:43 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putcolorendl(char *str, int color);
+void				ft_putcolor(char *str, int color);
 
 /*
 ** ft_to
@@ -55,7 +57,7 @@ int					ft_isprint(int c);
 int					ft_isspace(int c);
 
 /*
-** atoi && itoa
+** toi && toa
 */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
@@ -118,7 +120,6 @@ t_list				*ft_lstend(t_list *t);
 /*
 ** maths
 */
-
 int					ft_pow(int n, int p);
 
 #endif

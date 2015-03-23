@@ -1,48 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pile_tools.c                                       :+:      :+:    :+:   */
+/*   ps.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 20:25:45 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 20:25:47 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/23 22:15:14 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 22:15:18 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#ifndef PS_H
+# define PS_H
 
-int		pile_len(t_pile *pile)
+# include <libft.h>
+# include <limits.h>
+
+typedef struct		s_pile
 {
-	int	i;
+	int				data;
+	struct s_pile	*prev;
+}					t_pile;
 
-	i = 0;
-	while (pile != NULL)
-	{
-		pile = pile->prev;
-		i++;
-	}
-	return (i);
-}
+int					check_args(int ac, char **av);
 
-void	free_pile(t_pile **pile)
-{
-	while (*pile != NULL)
-	{
-		free(*pile);
-		*pile = (*pile)->prev;
-	}
-}
+void				create_pile(t_pile **pile, char **av, int ac);
 
-void	pile_copy(t_pile **cpy, t_pile *a)
-{
-	int	len;
+void				sort(t_pile **a, t_pile **b);
 
-	len = pile_len(a);
-	while (len)
-	{
-		pile_rev_rotate(&a);
-		pile_push(cpy, a->data);
-		len--;
-	}
-}
+#endif

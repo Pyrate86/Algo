@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_pile.c                                       :+:      :+:    :+:   */
+/*   ft_putcolorendl.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 20:24:43 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 20:24:45 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/23 17:05:26 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 17:05:27 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "includes/libft.h"
 
-int		check_pile(t_pile *a)
+void	ft_putcolorendl(char *str, int color)
 {
-	int err;
-
-	err = 0;
-	while (a->prev != NULL)
-	{
-		if (a->data > a->prev->data)
-			err++;
-		a = a->prev;
-	}
-	return (err);
+	ft_putcolor(str, color);
+	ft_putchar('\n');
 }

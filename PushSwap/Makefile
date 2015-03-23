@@ -17,20 +17,12 @@ SRC_PATH	= ./
 OBJ_PATH	= obj/
 INC_PATH	= includes/
 
-SRC_NAME	=	check_pile.c \
-				ia.c \
+SRC_NAME	=	check_args.c \
 				main.c \
-				op_pile_a.c \
-				op_pile_b.c \
-				op_pile_double.c \
 				pile.c \
-				pile_init.c \
-				pile_tools.c \
-				print_error.c \
-				print_pile.c \
-				print_tools.c
+				sort.c
 
-HEADER 		= $(INC_PATH)push_swap.h
+HEADER 		= $(INC_PATH)ps.h
 
 LIBFT_PATH	= libft
 LIBFT_NAME	= -lft

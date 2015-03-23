@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_error.c                                      :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 20:26:00 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 20:26:03 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/23 23:37:13 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/23 23:37:21 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <push_swap.h>
+#include "ps.h"
 
-int		print_error(void)
+void	sort(t_pile **a, t_pile **b)
 {
-	ft_putendl_fd("Error", 2);
-	return (-1);
+	(void)a;
+	(void)b;
 }
