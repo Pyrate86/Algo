@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   move_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 22:14:15 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 22:14:29 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/25 14:56:52 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/25 14:57:01 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int			main(int ac, char **av)
+void	sb(t_pile **a, t_pile **b)
 {
-	t_pile	*a;
-	t_pile	*b;
-	char	*seq;
-	t_mv	*mv;
+	(void)a;
+	swap(b);
+}
 
-	if (!check_args(ac, av))
-		error();
-	else
-	{
-		a = NULL;
-		b = NULL;
-		mv = NULL;
-		init(&mv);
-		create_pile(&a, av, ac - 1);
-		seq = find_sort(a, b, mv);
-		sort(&a, &b, seq, mv);
-		output(a, b);
-		// ft_putcolorendl("Good", 32);
-	}
-	return (0);
+void	pb(t_pile **a, t_pile **b)
+{
+	push(a, b);
+}
+
+void	rb(t_pile **a, t_pile **b)
+{
+	(void)a;
+	rotate(b);
+}
+
+void	rrb(t_pile **a, t_pile **b)
+{
+	(void)a;
+	r_rotate(b);
 }

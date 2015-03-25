@@ -18,8 +18,14 @@ OBJ_PATH	= obj/
 INC_PATH	= includes/
 
 SRC_NAME	=	check_args.c \
+				init.c \
 				main.c \
+				move_a.c \
+				move_ab.c \
+				move_b.c \
+				moves.c \
 				pile.c \
+				print.c \
 				sort.c
 
 HEADER 		= $(INC_PATH)ps.h

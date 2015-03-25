@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/03/23 22:14:15 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/03/23 22:14:29 by ghilbert         ###   ########.fr       */
+/*   Created: 2015/03/25 14:29:39 by ghilbert          #+#    #+#             */
+/*   Updated: 2015/03/25 14:29:49 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ps.h"
 
-int			main(int ac, char **av)
+void	error(void)
 {
-	t_pile	*a;
-	t_pile	*b;
-	char	*seq;
-	t_mv	*mv;
+	ft_putendl_fd("Error", 2);
+}
 
-	if (!check_args(ac, av))
-		error();
-	else
+static void	print_pile(t_pile *pile, char name)
+{
+	ft_putchar(name);
+	ft_putstr(": ");
+	while (pile != NULL)
 	{
-		a = NULL;
-		b = NULL;
-		mv = NULL;
-		init(&mv);
-		create_pile(&a, av, ac - 1);
-		seq = find_sort(a, b, mv);
-		sort(&a, &b, seq, mv);
-		output(a, b);
-		// ft_putcolorendl("Good", 32);
+		ft_putnbr(pile->data);
+		ft_putchar(' ');
+		pile = pile->prev;
 	}
-	return (0);
+	ft_putchar('\n');
+}
+
+void	output(t_pile *a, t_pile *b)
+{
+	print_pile(a, 'a');
+	print_pile(b, 'b');
 }
