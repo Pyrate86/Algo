@@ -52,7 +52,7 @@ all:	$(BIN)
 $(NAME): $(BIN)
 
 $(BIN): $(OBJS) $(HEADER) libft/libft.a | $(BIN_PATH)
-	$(CC) $(CFLAGS) -I$(INC_PATH) $(LIBS) $(OBJS) -o $(BIN)
+	$(CC) $(CFLAGS) -I$(INC_PATH) $(OBJS) -o $(BIN) $(LIBS)
 
 libft/libft.a:
 	make -C libft
