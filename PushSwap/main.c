@@ -31,7 +31,6 @@ int			main(int ac, char **av)
 		seq = find_sort(a, b, mv);
 		sort(&a, &b, seq, mv);
 		output(a, b);
-		// ft_putcolorendl("Good", 32);
 	}
 	return (0);
 }

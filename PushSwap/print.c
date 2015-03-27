@@ -17,6 +17,29 @@ void	error(void)
 	ft_putendl_fd("Error", 2);
 }
 
+void		print_moves(char *s, t_mv *mv)
+{
+	int 	i;
+	t_mv	*tmp;
+	
+	i = 0;
+	while (s[i])
+	{
+		tmp = mv;
+		while (tmp)
+		{
+			if (tmp->c == s[i])
+			{
+				ft_putstr(tmp->move);
+				ft_putchar('\t');
+			}
+			tmp = tmp->next;
+		}
+		i++;
+	}
+	ft_putendl("");
+}
+
 static void	print_pile(t_pile *pile, char name)
 {
 	ft_putchar(name);
