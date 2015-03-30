@@ -40,7 +40,7 @@ void				cpy_pile(t_pile *a, t_pile **cpy);
 int					get_plen(t_pile *p);
 int					get_last_data(t_pile *p);
 
-char				*find_sort(t_pile *a, t_pile *b, t_mv *mv);
+char				*find_sort(t_pile *a, t_pile *b);
 void				sort(t_pile **a, t_pile **b, char *seq, t_mv *mv);
 
 void				error(void);

@@ -31,7 +31,8 @@ void		print_moves(char *s, t_mv *mv)
 			if (tmp->c == s[i])
 			{
 				ft_putstr(tmp->move);
-				ft_putchar('\t');
+				if (s[i + 1])
+					ft_putchar(' ');
 			}
 			tmp = tmp->next;
 		}

@@ -26,11 +26,16 @@ int			main(int ac, char **av)
 		a = NULL;
 		b = NULL;
 		mv = NULL;
-		init(&mv);
-		create_pile(&a, av, ac - 1);
-		seq = find_sort(a, b, mv);
-		sort(&a, &b, seq, mv);
-		output(a, b);
+		if (ac == 2)
+			ft_putendl("");
+		else
+		{	
+			init(&mv);
+			create_pile(&a, av, ac - 1);
+			seq = find_sort(a, b);
+			sort(&a, &b, seq, mv);
+			print_moves(seq, mv);
+		}
 	}
 	return (0);
 }

@@ -45,7 +45,7 @@ BIN			= $(addprefix $(BIN_PATH),$(NAME))
 
 
 
-.PHONY: all clean fclean re proper libft
+.PHONY: all clean fclean re proper libft debug
 
 all:	$(BIN)
 
@@ -84,3 +84,6 @@ fclean: clean
 proper: all clean
 
 re:	fclean all
+
+debug :
+	CFLAGS="-g" make re
