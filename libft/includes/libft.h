@@ -6,7 +6,7 @@
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:55:31 by ghilbert          #+#    #+#             */
-/*   Updated: 2014/11/17 05:43:46 by ghilbert         ###   ########.fr       */
+/*   Updated: 2015/04/17 20:27:32 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putcolorendl(char *str, int color);
+void				ft_putcolor(char *str, int color);
 
 /*
 ** ft_to
@@ -55,7 +57,7 @@ int					ft_isprint(int c);
 int					ft_isspace(int c);
 
 /*
-** atoi && itoa
+** toi && toa
 */
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
@@ -84,7 +86,9 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char				*ft_strreplace(char *str, char *rem, char *rep);
 char				**ft_strsplit(char const *s, char c);
+char				**ft_strssplit(char const *s, char *pattern);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
 void				ft_striter(char *s, void (*f)(char *));
@@ -118,7 +122,6 @@ t_list				*ft_lstend(t_list *t);
 /*
 ** maths
 */
-
 int					ft_pow(int n, int p);
 
 #endif

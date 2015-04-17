@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2014.c /11.c /07 15:56:31 by ghilbert          #+#    #+#              #
-#    Updated: 2014/11/12 07:39:41 by ghilbert         ###   ########.fr        #
+#    Created: 2014/11/12 07:39:41 by ghilbert          #+#    #+#              #
+#    Updated: 2015/04/17 11:20:50 by ghilbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,8 @@ SRC		=	ft_atoi.c \
 			ft_pow.c \
 			ft_putchar.c \
 			ft_putchar_fd.c \
+			ft_putcolor.c \
+			ft_putcolorendl.c \
 			ft_putendl.c \
 			ft_putendl_fd.c \
 			ft_putnbr.c \
@@ -74,17 +76,16 @@ SRC		=	ft_atoi.c \
 			ft_strnew.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
+			ft_strreplace.c \
 			ft_strsplit.c \
-			ft_strsplitblank.c \
+			ft_strssplit.c \
 			ft_strstr.c \
 			ft_strsub.c \
 			ft_strtrim.c \
 			ft_tolower.c \
 			ft_toupper.c
-	
-OBJ		= $(SRC:.c=.o)
 
-.PHONY: all clean fclean re proper
+OBJ		= $(SRC:.c=.o)
 
 all:	$(NAME)
 
@@ -98,7 +99,5 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
-proper: all clean
 
 re: fclean all
