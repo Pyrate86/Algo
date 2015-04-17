@@ -25,6 +25,7 @@ typedef struct		s_pile
 typedef struct			s_moves
 {
 	char				c;
+	char				*move;
 	void				(*ptr_fnc)(t_pile **, t_pile **);
 	struct s_moves		*next;
 }						t_mv;
@@ -34,11 +35,16 @@ void				init(t_mv **mv);
 int					check_args(int ac, char **av);
 
 void				create_pile(t_pile **pile, char **av, int ac);
+void				pile_push(t_pile **pile, int data);
+void				cpy_pile(t_pile *a, t_pile **cpy);
+int					get_plen(t_pile *p);
+int					get_last_data(t_pile *p);
 
-char				*find_sort(t_pile *a, t_pile *b, t_mv *mv);
+char				*find_sort(t_pile *a, t_pile *b);
 void				sort(t_pile **a, t_pile **b, char *seq, t_mv *mv);
 
 void				error(void);
+void				print_moves(char *s, t_mv *mv);
 void				output(t_pile *a, t_pile *b);
 
 void				swap(t_pile **p);

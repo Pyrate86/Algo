@@ -36,8 +36,8 @@ OTHER_LIBS	= -lm
 LIBFT		= -L$(LIBFT_PATH) $(LIBFT_NAME)
 LIBS		= $(LIBFT)
 
-CC			= gcc
-CFLAGS		= -Wall -Werror -Wextra
+CC			= clang
+CFLAGS		+= -Wall -Werror -Wextra
 
 SRC			= $(addprefix $(SRC_PATH),$(SRC_NAME))
 OBJS 		= $(addprefix $(OBJ_PATH),$(subst .c,.o,$(SRC_NAME)))
@@ -45,14 +45,14 @@ BIN			= $(addprefix $(BIN_PATH),$(NAME))
 
 
 
-.PHONY: all clean fclean re proper libft
+.PHONY: all clean fclean re proper libft debug
 
 all:	$(BIN)
 
 $(NAME): $(BIN)
 
 $(BIN): $(OBJS) $(HEADER) libft/libft.a | $(BIN_PATH)
-	$(CC) $(CFLAGS) -I$(INC_PATH) $(LIBS) $(OBJS) -o $(BIN)
+	$(CC) $(CFLAGS) -I$(INC_PATH) $(OBJS) -o $(BIN) $(LIBS)
 
 libft/libft.a:
 	make -C libft
@@ -84,3 +84,6 @@ fclean: clean
 proper: all clean
 
 re:	fclean all
+
+debug :
+	CFLAGS="-g" make re
