@@ -6,7 +6,7 @@
 #    By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/09 02:27:17 by ghilbert          #+#    #+#              #
-#    Updated: 2015/05/09 16:52:19 by ghilbert         ###   ########.fr        #
+#    Updated: 2015/05/15 14:52:36 by ghilbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ else
 	NFLAGS += -fmacho64 -DOSX --prefix _
 endif
 
-CFLAGS += -Wall -Wextra -Werror -Iincludes/
+CFLAGS += -Wall -Wextra -Werror -Iincludes/ -Ilibft/includes
 
 obj/%.o: %.s
 	@$(MKDIR) -p $(dir $@)
@@ -46,11 +46,11 @@ obj/%.o: %.s
 
 all: $(NAME)
 
-out: $(NAME) main.o
-	$(CC) -Iincludes/ main.o -o $@ -L. -lfts
+out: $(NAME)
+	$(CC) -Iincludes/ mainTom.c -o $@ -L. -lfts
 
-test: $(NAME) maintest.o
-	$(CC) -Iincludes/ maintest.o -o $@ -L. -lfts
+test: $(NAME)
+	$(CC) -Iincludes/ maintest.c -o $@ -L. -lfts
 
 $(NAME): $(OBJS)
 	$(AR) -rcs $(NAME) $?

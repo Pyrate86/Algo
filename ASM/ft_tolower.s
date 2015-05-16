@@ -6,7 +6,7 @@
 ;    By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+         ;
 ;                                                 +#+#+#+#+#+   +#+            ;
 ;    Created: 2015/05/09 04:43:03 by ghilbert          #+#    #+#              ;
-;    Updated: 2015/05/09 04:45:09 by ghilbert         ###   ########.fr        ;
+;    Updated: 2015/05/15 13:57:12 by ghilbert         ###   ########.fr        ;
 ;                                                                              ;
 ; **************************************************************************** ;
 
@@ -20,6 +20,6 @@ ft_tolower:
 	je		end
 	add		rdi, 32
 
-end
+end:
 	mov		rax, rdi
 	ret
