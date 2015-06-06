@@ -6,13 +6,13 @@
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/05 17:40:24 by lscopel           #+#    #+#             */
-/*   Updated: 2015/05/15 14:57:01 by ghilbert         ###   ########.fr       */
+/*   Updated: 2015/05/16 17:04:22 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfts.h"
 
-/*main thx to maissa-b, tlepeche and vpailhe*/
+/*main thx to lscopel, maissa-b, tlepeche and vpailhe*/
 
 
 /*********************** Fonctions Tests Part_1 *******************************/
@@ -304,28 +304,28 @@ void		test_ft_tolower(void)
 	}
 }
 
-// void		test_ft_puts(void)
-// {
-// 	ft_putstr("ft_putstr: ");
-// 	ft_putstr("Bonjour");
-// 	ft_putstr(", ft_puts: ");
-// 	ft_puts("Bonjour");
+void		test_ft_puts(void)
+{
+	ft_putstr("ft_putstr: ");
+	ft_putstr("Bonjour");
+	ft_putstr(", ft_puts: ");
+	ft_puts("Bonjour");
 
-// 	ft_putstr("ft_putstr: ");
-// 	ft_putstr("13, ");
-// 	ft_putstr("ft_puts: ");
-// 	ft_puts("13");
+	ft_putstr("ft_putstr: ");
+	ft_putstr("13, ");
+	ft_putstr("ft_puts: ");
+	ft_puts("13");
 
-// 	ft_putstr("ft_putstr: ");
-// 	ft_putstr("hello world, ");
-// 	ft_putstr("ft_puts: ");
-// 	ft_puts("hello world");
+	ft_putstr("ft_putstr: ");
+	ft_putstr("hello world, ");
+	ft_putstr("ft_puts: ");
+	ft_puts("hello world");
 
-// 	ft_putstr("ft_putstr: ");
-// 	ft_putstr("!@#$%^&*(), ");
-// 	ft_putstr("ft_puts: ");
-// 	ft_puts("!@#$%^&*()");
-// }
+	ft_putstr("ft_putstr: ");
+	ft_putstr("!@#$%^&*(), ");
+	ft_putstr("ft_puts: ");
+	ft_puts("!@#$%^&*()");
+}
 
 // /*********************** Fonctions Tests Part_2 *******************************/
 
@@ -806,8 +806,8 @@ int 		main(void)
 	test_ft_toupper();
 	ft_putstr("\nFT_TOLOWER:\n");
 	test_ft_tolower();
-	// ft_putstr("\n\nFT_PUTS:\n");
-	// test_ft_puts();
+	ft_putstr("\n\nFT_PUTS:\n");
+	test_ft_puts();
 
 	// ft_putstr("\n\n\033[33mPart_2:\n\033[m");
 
