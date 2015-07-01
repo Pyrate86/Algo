@@ -6,7 +6,7 @@
 #    By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/09 02:27:17 by ghilbert          #+#    #+#              #
-#    Updated: 2015/05/15 14:52:36 by ghilbert         ###   ########.fr        #
+#    Updated: 2015/07/01 19:54:25 by ghilbert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ SRCS =  ft_isalnum.s \
 		ft_tolower.s \
 		ft_bzero.s \
 		ft_strcat.s \
-		ft_puts.s
+		ft_strlen.s \
+		ft_memcpy.s \
+		ft_memset.s
 
 OBJS = $(patsubst %.s,obj/%.o,$(SRCS))
 

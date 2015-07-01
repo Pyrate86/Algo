@@ -6,7 +6,7 @@
 /*   By: ghilbert <ghilbert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/05/09 03:12:58 by ghilbert          #+#    #+#             */
-/*   Updated: 2015/05/15 14:55:12 by ghilbert         ###   ########.fr       */
+/*   Updated: 2015/07/01 19:53:59 by ghilbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isspace(char c);
 
-// void	*ft_memcpy(void *dst, const void *src, size_t n);
-// void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
 // char	*ft_strcpy(char *dst, const char *src);
 // char	*ft_strdup(const char *s1);
-// int		ft_strlen(char *str);
+int		ft_strlen(char *str);
 // char	*ft_strncpy(char *dst, const char *src, size_t n);
 // char	*ft_strnew(size_t size);
 // void	*ft_memalloc(size_t size);

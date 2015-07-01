@@ -304,191 +304,191 @@ void		test_ft_tolower(void)
 	}
 }
 
-void		test_ft_puts(void)
-{
-	ft_putstr("ft_putstr: ");
-	ft_putstr("Bonjour");
-	ft_putstr(", ft_puts: ");
-	ft_puts("Bonjour");
+// void		test_ft_puts(void)
+// {
+// 	ft_putstr("ft_putstr: ");
+// 	ft_putstr("Bonjour");
+// 	ft_putstr(", ft_puts: ");
+// 	ft_puts("Bonjour");
 
-	ft_putstr("ft_putstr: ");
-	ft_putstr("13, ");
-	ft_putstr("ft_puts: ");
-	ft_puts("13");
+// 	ft_putstr("ft_putstr: ");
+// 	ft_putstr("13, ");
+// 	ft_putstr("ft_puts: ");
+// 	ft_puts("13");
 
-	ft_putstr("ft_putstr: ");
-	ft_putstr("hello world, ");
-	ft_putstr("ft_puts: ");
-	ft_puts("hello world");
+// 	ft_putstr("ft_putstr: ");
+// 	ft_putstr("hello world, ");
+// 	ft_putstr("ft_puts: ");
+// 	ft_puts("hello world");
 
-	ft_putstr("ft_putstr: ");
-	ft_putstr("!@#$%^&*(), ");
-	ft_putstr("ft_puts: ");
-	ft_puts("!@#$%^&*()");
-}
+// 	ft_putstr("ft_putstr: ");
+// 	ft_putstr("!@#$%^&*(), ");
+// 	ft_putstr("ft_puts: ");
+// 	ft_puts("!@#$%^&*()");
+// }
 
 // /*********************** Fonctions Tests Part_2 *******************************/
 
-// void		test_ft_strlen(void)
-// {
-// 	char str1[] = "Ici, la taille compte";
-// 	char str2[] = "Oui mais on dit quelle ne compte pas";
-// 	char str3[] = "Seulement les rageux disent ça\n\n\n\n";
-// 	char str4[] = "Moi je ne suis\0 pourtant pas un rageu";
-// 	char str5[] = "T'en a pas marre de parler solo?";
-// 	char str6[] = "Un peu, on arrête là";
-// 	char str7[] = "Ok!";
+void		test_ft_strlen(void)
+{
+	char str1[] = "Ici, la taille compte";
+	char str2[] = "Oui mais on dit quelle ne compte pas";
+	char str3[] = "Seulement les rageux disent ça\n\n\n\n";
+	char str4[] = "Moi je ne suis\0 pourtant pas un rageu";
+	char str5[] = "T'en a pas marre de parler solo?";
+	char str6[] = "Un peu, on arrête là";
+	char str7[] = "Ok!";
 
-// 	(ft_strlen(str1) == strlen(str1)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str1, strlen(str1), ft_strlen(str1));
+	(ft_strlen(str1) == strlen(str1)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str1, strlen(str1), ft_strlen(str1));
 
-// 	(ft_strlen(str2) == strlen(str2)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str2, strlen(str2), ft_strlen(str2));
+	(ft_strlen(str2) == strlen(str2)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str2, strlen(str2), ft_strlen(str2));
 
-// 	(ft_strlen(str3) == strlen(str3)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("Seulement les rageux disent ca\\n\\n\\n\\n-> strlen: %zd, ft_strlen: %zd\n", strlen(str3), ft_strlen(str3));
+	(ft_strlen(str3) == strlen(str3)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("Seulement les rageux disent ca\\n\\n\\n\\n-> strlen: %zd, ft_strlen: %zd\n", strlen(str3), ft_strlen(str3));
 
-// 	(ft_strlen(str4) == strlen(str4)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str4, strlen(str4), ft_strlen(str4));
+	(ft_strlen(str4) == strlen(str4)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str4, strlen(str4), ft_strlen(str4));
 
-// 	(ft_strlen(str5) == strlen(str5)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str1, strlen(str5), ft_strlen(str5));
+	(ft_strlen(str5) == strlen(str5)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str5, strlen(str5), ft_strlen(str5));
 
-// 	(ft_strlen(str6) == strlen(str6)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str1, strlen(str6), ft_strlen(str6));
+	(ft_strlen(str6) == strlen(str6)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str6, strlen(str6), ft_strlen(str6));
 
-// 	(ft_strlen(str7) == strlen(str7)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str1, strlen(str7), ft_strlen(str7));
-// }
+	(ft_strlen(str7) == strlen(str7)) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	printf("%s -> strlen: %zd, ft_strlen: %zd\n", str7, strlen(str7), ft_strlen(str7));
+}
 
-// void		test_ft_memcpy(void)
-// {
-// 	char *str1 = strdup("Coucou toi!");
-// 	char *str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "aaaaaaaa", 0), memcpy(str2, "aaaaaaaa", 0), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"aaaaaaa\", 0) ->"); 
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr(", ");
-// 	ft_putstr(" ft_memcpy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr("\n");
+void		test_ft_memcpy(void)
+{
+	char *str1 = strdup("Coucou toi!");
+	char *str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "aaaaaaaa", 0), memcpy(str2, "aaaaaaaa", 0), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memcpy(\"Coucou toi!\", \"aaaaaaa\", 0) ->"); 
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr(", ");
+	ft_putstr(" ft_memcpy: ");
+	ft_putstr(str1);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "AAAAAAAA", 8), memcpy(str2, "AAAAAAAA", 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");	
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"AAAAAAAA\", 8) ->"); 
-// 	ft_putstr("ft_mempy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "AAAAAAAA", 8), memcpy(str2, "AAAAAAAA", 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");	
+	ft_putstr("memcpy(\"Coucou toi!\", \"AAAAAAAA\", 8) ->"); 
+	ft_putstr("ft_mempy: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "12345678", 8), memcpy(str2, "12345678", 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"12345678\", 8) ->"); 
-// 	ft_putstr("ft_memcpy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "12345678", 8), memcpy(str2, "12345678", 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memcpy(\"Coucou toi!\", \"12345678\", 8) ->"); 
+	ft_putstr("ft_memcpy: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "jIujIuH", 7), memcpy(str2, "jIujIuH", 7),11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"jIujIuH\", 7) ->"); 
-// 	ft_putstr("ft_memcpy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "jIujIuH", 7), memcpy(str2, "jIujIuH", 7),11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memcpy(\"Coucou toi!\", \"jIujIuH\", 7) ->"); 
+	ft_putstr("ft_memcpy: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "/>*<+|@-12345", 13), memcpy(str2, "/>*<+|@-12345", 13), 14)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"/>*<+|@-12345\", 13) ->"); 
-// 	ft_putstr("ft_memcpy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "/>*<+|@-12345", 13), memcpy(str2, "/>*<+|@-12345", 13), 14)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memcpy(\"Coucou toi!\", \"/>*<+|@-12345\", 13) ->"); 
+	ft_putstr("ft_memcpy: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memcpy(str1, "yoloswag", 15), memcpy(str2, "yoloswag", 15), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memcpy(\"Coucou toi!\", \"yoloswag\", 15) ->"); 
-// 	ft_putstr("ft_memcpy: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("memcpy: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
-// }
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memcpy(str1, "yoloswag", 15), memcpy(str2, "yoloswag", 15), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memcpy(\"Coucou toi!\", \"yoloswag\", 15) ->"); 
+	ft_putstr("ft_memcpy: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("memcpy: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
+}
 
 
-// void		test_ft_memset(void)
-// {
+void		test_ft_memset(void)
+{
 
-// 	char *str1 = strdup("Coucou toi!");
-// 	char *str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memset(str1, 'a', 4), memset(str2, 'a', 4), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memset(\"Coucou toi!\", \'a\', 4) -> "); 
-// 	ft_putstr("memset: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("ft_memset: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	char *str1 = strdup("Coucou toi!");
+	char *str2 = strdup("Coucou toi!");
+	((memcmp(ft_memset(str1, 'a', 4), memset(str2, 'a', 4), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memset(\"Coucou toi!\", \'a\', 4) -> "); 
+	ft_putstr("memset: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("ft_memset: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memset(str1, 'A', 1), memset(str2, 'A', 1), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");	
-// 	ft_putstr("memset(\"Coucou toi!\", \'A\', 1) -> "); 
-// 	ft_putstr("memset: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("ft_memset: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memset(str1, 'A', 1), memset(str2, 'A', 1), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");	
+	ft_putstr("memset(\"Coucou toi!\", \'A\', 1) -> "); 
+	ft_putstr("memset: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("ft_memset: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memset(str1, '1', 8), memset(str2, '1', 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memset(\"Coucou toi!\", \'1\', 8) -> "); 
-// 	ft_putstr("memset: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("ft_memset: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memset(str1, '1', 8), memset(str2, '1', 8), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memset(\"Coucou toi!\", \'1\', 8) -> "); 
+	ft_putstr("memset: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("ft_memset: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memset(str1, '!', 0), memset(str2, '!', 0),11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memset(\"Coucou toi!\", \'!\', 0) -> "); 
-// 	ft_putstr("memset: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("ft_memset: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memset(str1, '!', 0), memset(str2, '!', 0),11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memset(\"Coucou toi!\", \'!\', 0) -> "); 
+	ft_putstr("memset: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("ft_memset: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
 
-// 	str1 = strdup("Coucou toi!");
-// 	str2 = strdup("Coucou toi!");
-// 	((memcmp(ft_memset(str1, ' ', 4), memset(str2, ' ', 4), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
-// 	ft_putstr("memset(\"Coucou toi!\", \' \', 4) -> "); 
-// 	ft_putstr("memset: ");
-// 	ft_putstr(str1);
-// 	ft_putstr(", ");
-// 	ft_putstr("ft_memset: ");
-// 	ft_putstr(str2);
-// 	ft_putstr("\n");
-// }
+	str1 = strdup("Coucou toi!");
+	str2 = strdup("Coucou toi!");
+	((memcmp(ft_memset(str1, ' ', 4), memset(str2, ' ', 4), 11)) == 0) ? ft_putstr("\033[32mOK \033[m") : ft_putstr("\033[31mFAIL \033[m");
+	ft_putstr("memset(\"Coucou toi!\", \' \', 4) -> "); 
+	ft_putstr("memset: ");
+	ft_putstr(str1);
+	ft_putstr(", ");
+	ft_putstr("ft_memset: ");
+	ft_putstr(str2);
+	ft_putstr("\n");
+}
 
 // void		test_ft_strdup(void)
 // {
@@ -806,17 +806,17 @@ int 		main(void)
 	test_ft_toupper();
 	ft_putstr("\nFT_TOLOWER:\n");
 	test_ft_tolower();
-	ft_putstr("\n\nFT_PUTS:\n");
-	test_ft_puts();
+	// ft_putstr("\n\nFT_PUTS:\n");
+	// test_ft_puts();
 
-	// ft_putstr("\n\n\033[33mPart_2:\n\033[m");
+	ft_putstr("\n\n\033[33mPart_2:\n\033[m");
 
-	// ft_putstr("\nFT_STRLEN:\n");
-	// test_ft_strlen();
-	// ft_putstr("\nFT_MEMCPY:\n");
-	// test_ft_memcpy();
-	// ft_putstr("\nFT_MEMSET:\n");
-	// test_ft_memset();
+	ft_putstr("\nFT_STRLEN:\n");
+	test_ft_strlen();
+	ft_putstr("\nFT_MEMCPY:\n");
+	test_ft_memcpy();
+	ft_putstr("\nFT_MEMSET:\n");
+	test_ft_memset();
 	// ft_putstr("\nFT_STRDUP:\n");
 	// test_ft_strdup();
 
